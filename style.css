@@ -1,0 +1,61 @@
+html {
+	font-size: 18px;
+}
+
+body {
+	color: white;
+	background-color: black;
+	font-family: system-ui, sans-serif;
+}
+
+.container {
+	display: grid;
+	grid-template-columns: auto auto;
+	grid-gap: 10px;
+}
+@media only screen and (max-width: 768px) {
+	.container {
+		grid-template-columns: auto;
+		grid-template-rows: auto auto;
+	}
+}
+
+.team {
+	text-align: center;
+	display: grid;
+	grid-template-rows: auto auto auto;
+}
+
+.buttons {
+	display: grid;
+	grid-template-rows: auto auto;
+	/*   padding: 0 5rem; */
+	margin: auto;
+	grid-gap: 0.25rem;
+}
+
+.add, .subtract {
+	display: grid;
+	grid-template-columns: 4rem 4rem 4rem 4rem;
+	grid-gap: 0.25rem;
+}
+
+.buttons button {
+	border: 1px solid white;
+	background: black;
+	color: white;
+	font-size: 1.5rem;
+	line-height: 2rem;
+	white-space: nowrap;
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.teamName {
+	margin: 1rem 0;
+}
+
+.score {
+	font-size: 4rem;
+	margin: 0 0 1rem 0;
+}
