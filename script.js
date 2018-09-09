@@ -1,7 +1,7 @@
 function add(points, team) {
-	scoreEl = document.querySelector(".team." + team + " .score");
-	oldScore = parseInt(scoreEl.textContent);
-	newScore = oldScore + points;
+	var scoreEl = document.querySelector(".team." + team + " .score");
+	var oldScore = parseInt(scoreEl.textContent);
+	var newScore = oldScore + points;
 	newScore = validateScore(newScore);
 	scoreEl.textContent = newScore;
 }
@@ -18,4 +18,8 @@ function validateScore(score) {
 	}
 
 	return score;
+}
+
+function setTheme(theme) {
+	document.body.setAttribute("theme", theme);
 }
