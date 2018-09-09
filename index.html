@@ -9,6 +9,7 @@
 	<meta name="author" content="Trevor Ross">
 	<meta name="viewport" content="width=device-width">
 	<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E=" crossorigin="anonymous"></script>
+	<script src="script.js"></script>
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -50,13 +51,5 @@
 			</div>
 		</div>
 	</div>
-	<script src="js/scripts.js">
-	function add(points, team) {
-		$scoreEl = $(".team." + team + " .score");
-		oldScore = parseInt($scoreEl.text());
-		newScore = oldScore + points;
-		$scoreEl.text(newScore);
-	}
-	</script>
 </body>
 </html>
