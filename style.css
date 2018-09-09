@@ -3,9 +3,27 @@ html {
 }
 
 body {
-	color: white;
-	background-color: black;
 	font-family: system-ui, sans-serif;
+	display: grid;
+	grid-template-rows: auto auto;
+}
+
+.settingsBar {
+	display: grid;
+	grid-template-columns: auto auto;
+}
+
+.settingsBar .title {
+	margin: 0;
+}
+
+.settingsBar .themeSelect {
+	text-align: right;
+}
+
+.settingsBar .themeSelect,
+.settingsBar .themeSelect select {
+	font-size: 1rem;
 }
 
 .container {
@@ -41,10 +59,7 @@ body {
 }
 
 .buttons button {
-	border: 2px solid white;
 	border-radius: 1rem;
-	background: black;
-	color: white;
 	font-size: 1.5rem;
 	line-height: 2rem;
 	white-space: nowrap;
@@ -53,10 +68,68 @@ body {
 }
 
 .teamName {
-	margin: 1rem 0;
+	font-size: 1.5rem;
+	border: none;
+	width:auto;
+	margin: 1rem auto;
 }
 
 .score {
 	font-size: 4rem;
 	margin: 0 0 1rem 0;
 }
+
+/*** THEMES ***/
+
+/*** DARK ***/
+body[theme="dark"] {
+ 	color: white;
+	background-color: black;
+}
+
+body[theme="dark"] .teamName {
+ 	color: white;
+	background-color: black;
+}
+
+body[theme="dark"] .buttons button {
+ 	color: white;
+	background-color: black;
+	border: 2px solid white;
+}
+
+body[theme="dark"] .themeSelect select {
+ 	color: white;
+	background-color: black;
+	border: none;
+}
+
+/*** LIGHT ***/
+body[theme="light"] {
+ 	color: #4d4d4d;
+	background-color: white;
+}
+
+body[theme="light"] .teamName {
+ 	color: #4d4d4d;
+	background-color: white;
+}
+
+body[theme="light"] .buttons button {
+ 	color: #4d4d4d;
+	background-color: white;
+	border: none;
+	box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16), 0 0 0 1px rgba(0,0,0,0.08);
+
+}
+
+body[theme="light"] .buttons button:hover {
+	box-shadow: 0 3px 8px 0 rgba(0,0,0,0.2), 0 0 0 1px rgba(0,0,0,0.08)
+}
+
+body[theme="light"] .themeSelect select {
+ 	color: #4d4d4d;
+	background-color: white;
+	border: none;
+}
+
